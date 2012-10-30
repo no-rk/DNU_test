@@ -1,0 +1,10 @@
+<div id="user_nav">
+  <% if user_signed_in?%>
+    こんにちは ENo.<%= current_user.id %> さん。<%= link_to "（ログアウト）", destroy_user_session_path, :method=>'delete' %>
+  <% else %>
+    <%= link_to "新規登録", new_user_registration_path %> or 
+    <%= link_to "ログイン", new_user_session_path %>
+  <% end %>
+</div>
+
+<h1>登録とログインなどのテスト</h1>

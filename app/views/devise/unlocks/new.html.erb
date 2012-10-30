@@ -1,0 +1,12 @@
+<h2>アカウントが凍結されたら</h2>
+
+<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email, 'メールアドレス' %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.submit "凍結解除メール再送" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
