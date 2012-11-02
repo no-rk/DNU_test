@@ -8,3 +8,12 @@
 </div>
 
 <h1>登録とログインなどのテスト</h1>
+
+<p><table border="1">
+<% @users.each do |u| %>
+<tr><td><%= u.id %></td>
+	<td><%= u.status %></td>
+	<td><%= u.email %></td>
+	<td><%= u.updated_at %></td></tr>
+<% end %>
+</table></p>
